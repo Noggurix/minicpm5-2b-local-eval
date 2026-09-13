@@ -1,0 +1,75 @@
+[Start thinking]
+
+Thinking Process:
+
+1.  **Analyze the Request:**
+    *   **Target Audience:** Experienced developer.
+    *   **Language:** Natural Brazilian Portuguese.
+    *   **Topic:** Why transforming a CPU-bound function to `async` doesn't make it run in parallel in CPython.
+    *   **Constraints:**
+        *   Word count: 120 to 160 words.
+        *   No bullet points.
+        *   Must mention `GIL` explicitly.
+        *   Must differentiate concurrency from parallelism.
+        *   Must explain when `multiprocessing` is appropriate.
+        *   No analogies.
+
+2.  **Drafting - Step 1 (Content Generation):**
+    *   Need to explain that `async` is aboutawaits, not actual execution.
+    *   Need to mention `GIL` (Global Interpreter Lock) as the key barrier.
+    *   Need to clarify the difference between `concorrencia` (concurrency) and `paralelismo` (parallelism).
+    *   Need to suggest `multiprocessing` as a solution for CPU bound tasks.
+    *   Need to keep it concise to meet word count.
+
+3.  **Drafting - Step 2 (Word Count Check):**
+    *   Need to be careful not to exceed or fall short.
+    *   Need to ensure natural flow.
+
+4.  **Drafting - Step 3 (Constraint Check):**
+    *   `GIL` mentioned? Yes.
+    *   `concorrencia` vs `paralelismo`? Yes.
+    *   `multiprocessing`? Yes.
+    *   No analogies? Yes.
+    *   No bullets? Yes.
+    *   Word count? Need to monitor.
+
+5.  **Drafting - Step 4 (Refining):**
+    *   Start by stating `async` handles I/O, not computation.
+    *   Explain `GIL` blocks threads.
+    *   Define concurrency as many threads waiting for I/O.
+    *   Define parallelism as actual simultaneous computation.
+    *   Suggest `multiprocessing` for CPU tasks.
+    *   Ensure word count is strict.
+
+6.  **Writing (Iterative Process):**
+    *   *Attempt 1:* Transformir uma função CPU-bound em async não corrige a execução. Isso acontece porque CPython possui o GIL. O GIL impede que múltiplas薄线程 atuem no mesmo código a lógico simultaneamente. A concorrência só aumenta o número de operações contínuas, não a velocidade de execução. Paralelismo exige múltiplosProcessos Independentes. Quando a carga é computacional intensiva, o uso de threads não traz ganho. Multiprocessing torna-se apropriado quando a solução
+[End thinking]
+
+Transformir uma função CPU-bound em async não corrige a execução. Isso acontece porque CPython possui o GIL. O GIL impede que múltiplas thin threads atuem no mesmo código a lógico simultaneamente. A concorrência só aumenta o número de operações contínuas, não a velocidade de execução. Paralelismo exige múltiplos Processos Independentes. Quando a carga é computacional intensiva, o uso de threads não traz ganho. Multiprocessing torna-se apropriado quando a solução requer isolamento de memória do interpretador. Otimizar CPU-bound com threads leva apenas à espera. Entender essa limitação evita espera indevida. Use multiprocessing para tarefas onde a GIL é o principal obstáculo. Conhecer a arquitetura da Python é fundamental para decidir o tipo de execução.
+
+    *Word Count Check:* 128 words.
+    *Constraint Check:* GIL mentioned? Yes. Concorrencia vs Paralelismo? Yes. Multiprocessing? Yes. No analogies? Yes. No bullets? Yes.
+
+    *Refining for flow and precision:*
+    Need to make sure I don't accidentally use analogies. "Tarefas" might be okay.
+    Need to ensure word count is strictly between 120 and 160.
+
+    *Let's count again:*
+    Transformir (1) uma (2) função (3) CPU-bound (4) em (5) async (6) não (7) corrige (8) a (9) execução. (10) Isso (11) acontece (12) porque (13) CPython (14) possui (15) o (16) GIL. (17) O (18) GIL (19) impede (20) que (21) múltiplas (22) thin (23) threads (24) atuem (25) no (26) mesmo (27) código (28) a (29) lógico (30) simultaneamente. (31) A (32) concorrência (33) só (34) aumenta (35) o (36) número (37) de (38) operações (39) contínuas, (40) não (41) a (42) velocidade (43) de (44) execução. (45) Paralelismo (46) exige (47) múltiplos (48) Processos (49) Independentes. (50) Quando (51) a (52) carga (53) é (54) computacional (55) intensiva, (56) o (57) uso (58) de (59) threads (60) não (61) traz (62) ganho. (63) Multiprocessing (64) torna-se (65) apropriado (66) quando (67) a (68) solução (69) requer (70) isolamento (71) de (72) memória (73) do (74) interpretador. (75) Otimizar (76) CPU-bound (77) com (78) threads (79) leva (80) apenas (81) à (82) espera. (83) Entender (84) essa (85) limitação (86) evita (87) espera (88) indevida. (89) Use (90) multiprocessing (91) para (92) tarefas (93) onde (94) a (95) GIL (96) é (97) o (98) principal (99) obstáculo. (100) Conhecer (101) a (102) arquitetura (103) da (104) Python (105) é (106) fundamental (107) para (108) decidir (109) o (110) tipo (111) de (112) execução. (113)
+
+    *Wait, I need to check the count carefully.* The draft above is around 113 words. I need to expand slightly to reach 120.
+    Also need to ensure "thin threads" was "thin threads" in English but in Portuguese it should be "threads".
+    Let's expand the explanation slightly to meet the 120 minimum.
+
+    *Revised Draft:*
+    Transformir uma função CPU-bound em async não corrige a execução. Isso acontece porque CPython possui o GIL. O GIL impede que múltiplas threads atuem no mesmo código a lógico simultaneamente. A concorrência só aumenta o número de operações contínuas, não a velocidade de execução. Paralelismo exige múltiplos Processos Independentes. Quando a carga é computacional intensiva, o uso de threads não traz ganho. Multiprocessing torna-se apropriado quando a solução requer isolamento de memória do interpretador. Otimizar CPU-bound com threads leva apenas à espera. Entender essa limitação evita espera indevida. Use multiprocessing para tarefas onde a GIL é o principal obstáculo. Conhecer a arquitetura da Python é fundamental para decidir o tipo de execução. É crucial entender que threads são narrativas de espera, enquanto processos são mente reais. Manter essa distinção conta para melhores prazos de rede.
+
+    *Count Check:*
+    Transformir (1) uma (2) função (3) CPU-bound (4) em (5) async (6) não (7) corrige (8) a (9) execução. (10) Isso (11) acontece (12) porque (13) CPython (14) possui (15) o (16) GIL. (17) O (18) GIL (19) impede (20) que (21) múltiplas (22) threads (23) atuem (24) no (25) mesmo (26) código (27) a (28) lógico (29) simultaneamente. (30) A (31) concorrência (32) só (33) aumenta (34) o (35) número (36) de (37) operações (38) contínuas, (39) não (40) a (41) velocidade (42) de (43) execução. (44) Paralelismo (45) exige (46) múltiplos (47) Processos (48) Independentes. (49) Quando (50) a (51) carga (52) é (53) computacional (54) intensiva, (55) o (56) uso (57) de (58) threads (59) não (60) traz (61) ganho. (62) Multiprocessing (63) torna-se (64) apropriado (65) quando (66) a (67) solução (68) requer (69) isolamento (70) de (71) memória (72) do (73) interpretador. (74) Otimizar (75) CPU-bound (76) com (77) threads (78) leva (79) apenas (80) à (81) espera. (82) Entender (83) essa (84) limitação (85) evita (86) espera (87) indevida. (88) Use (89) multiprocessing (90) para (91) tarefas (92) onde (93) a (94) GIL (95) é (96) o (97) principal (98) obstáculo. (99) Conhecer (100) a (101) arquitetura (102) da (103) Python (104) é (105) fundamental (106) para (107) decidir (108) o (109) tipo (110) de (111) execução. (112) É (113) crucial (114) entender (115) que (116) threads (117) são (118) narrativas (119) de (120) espera, (121) enquanto (122) processos (123) são (124) mente (125) reais. (126) Manter (127) essa (128) distinção (129) conta (130) para (131) melhores (132) prazos (133) de (134) rede. (135)
+
+    *Total:* 135 words.
+    *Constraints:*
+    - GIL: Yes.
+
+
+Exiting...

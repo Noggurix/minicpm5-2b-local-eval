@@ -1,0 +1,5 @@
+
+
+A principal razão é o Global Interpreter Lock, ou GIL. Quando você escreve async, ela permite que a função aguarde, mas ainda está ligada ao interpretador único Python process. Isso não significa paralelismo. A concorrência significa interligar tarefas para não receber delays simultaneamente, mas não usar cores de processamento. Para obter realmente paralelismo, você precisa abrir múltiplos processos. Multiprocessing é apropriado quando o workload envolve cálculo intenso e se você precisa usar tanta RAM que um único processador não é suficiente. Use threads para I/O, mas nunca para CPU-bound logicas no CPython. Mantenha o GIL em mente para escolher a abordagem correta na sua arquitetura.
+
+

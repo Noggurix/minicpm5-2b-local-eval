@@ -1,0 +1,73 @@
+
+
+Loading model... 
+
+▄▄ ▄▄
+██ ██
+██ ██  ▀▀█▄ ███▄███▄  ▀▀█▄    ▄████ ████▄ ████▄
+██ ██ ▄█▀██ ██ ██ ██ ▄█▀██    ██    ██ ██ ██ ██
+██ ██ ▀█▄██ ██ ██ ██ ▀█▄██ ██ ▀████ ████▀ ████▀
+                                    ██    ██
+                                    ▀▀    ▀▀
+
+build      : b1-91f6a6c
+model      : openbmb/MiniCPM5-2B-GGUF:Q8_0
+ftype      : Q8_0
+modalities : text
+
+available commands:
+  /exit or Ctrl+C     stop or exit
+  /regen              regenerate the last response
+  /clear              clear the chat history
+  /read <file>        add a text file
+  /glob <pattern>     add text files using globbing pattern
+
+
+
+> Dados:
+
+Ada: backend, Go, senior
+Bia: frontend, TypeScript, junior
+Caio: backend, Rust, mid
+Duda: data, Python, senior
+
+Retorne EXATAMENTE um único objeto JSON minificado, sem Markdown e sem explicação.
+
+As únicas chaves permitidas são:
+senior_names
+backend_count
+languages
+
+Regras:
+- senior_names: nomes dos seniors em ordem alfabética.
+- backend_count: número inteiro de pessoas backend.
+- languages: linguagens únicas em ordem alfabética.
+
+Não inclua nenhuma outra chave.
+
+[Start thinking]
+
+We need to return a JSON object with exactly these keys: senior_names, backend_count, languages.
+- senior_names: names of seniors in alphabetical order.
+- backend_count: integer number of people with backend role.
+- languages: unique languages in alphabetical order.
+
+From the given data:
+Ada: backend, Go, senior
+Bia: frontend, TypeScript, junior
+Caio: backend, Rust, mid
+Duda: data, Python, senior
+
+Seniors: Ada, Duda. Alphabetical order: Ada, Duda.
+Backend count: Ada, Caio -> 2.
+Languages: Go, Python, Rust, TypeScript. Unique, alphabetical: Go, Python, Rust, TypeScript.
+
+So JSON: {"senior_names": ["Ada", "Duda"], "backend_count": 2, "languages": ["Go", "Python", "Rust", "TypeScript"]}
+
+Minified JSON without markdown.
+[End thinking]
+
+{"senior_names": ["Ada", "Duda"], "backend_count": 2, "languages": ["Go", "Python", "Rust", "TypeScript"]}
+
+
+Exiting...

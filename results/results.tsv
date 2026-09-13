@@ -1,0 +1,70 @@
+group	item	variant	value	unit	notes	provenance	evidence
+throughput	pp512	Q4_K_M_official	19.79	tok/s	clean unattended; sd 0.41	raw_log_and_ledger	experiments/throughput/20260911-072256/official-Q4_K_M.log; RESULTS.md section 3.1
+throughput	tg128	Q4_K_M_official	9.08	tok/s	clean unattended; sd 0.02	raw_log_and_ledger	experiments/throughput/20260911-072256/official-Q4_K_M.log; RESULTS.md section 3.1
+throughput	pp512	Q4_K_M_bartowski	18.85	tok/s	clean unattended; sd 0.04	raw_log_and_ledger	experiments/throughput/20260911-072256/bartowski-Q4_K_M.log; RESULTS.md section 3.1
+throughput	tg128	Q4_K_M_bartowski	8.67	tok/s	clean unattended; sd 0.06	raw_log_and_ledger	experiments/throughput/20260911-072256/bartowski-Q4_K_M.log; RESULTS.md section 3.1
+throughput	pp512	IQ4_XS	21.83	tok/s	clean unattended; sd 0.04	raw_log_and_ledger	experiments/throughput/20260911-072256/bartowski-IQ4_XS.log; RESULTS.md section 3.1
+throughput	tg128	IQ4_XS	6.98	tok/s	clean unattended; sd 0.02	raw_log_and_ledger	experiments/throughput/20260911-072256/bartowski-IQ4_XS.log; RESULTS.md section 3.1
+throughput	pp512	Q5_K_M	10.06	tok/s	clean unattended; sd 0.01	raw_log_and_ledger	experiments/throughput/20260911-072256/bartowski-Q5_K_M.log; RESULTS.md section 3.1
+throughput	tg128	Q5_K_M	6.49	tok/s	clean unattended; sd 0.07	raw_log_and_ledger	experiments/throughput/20260911-072256/bartowski-Q5_K_M.log; RESULTS.md section 3.1
+throughput	pp512	Q6_K	12.81	tok/s	clean unattended; sd 0.03	raw_log_and_ledger	experiments/throughput/20260911-072256/bartowski-Q6_K.log; RESULTS.md section 3.1
+throughput	tg128	Q6_K	7.20	tok/s	clean unattended; sd 0.01	raw_log_and_ledger	experiments/throughput/20260911-072256/bartowski-Q6_K.log; RESULTS.md section 3.1
+throughput	pp512	Q3_K_M	11.49	tok/s	clean unattended; sd 0.04	raw_log_and_ledger	experiments/throughput/20260911-072256/bartowski-Q3_K_M.log; RESULTS.md section 3.1
+throughput	tg128	Q3_K_M	8.26	tok/s	clean unattended; sd 0.01	raw_log_and_ledger	experiments/throughput/20260911-072256/bartowski-Q3_K_M.log; RESULTS.md section 3.1
+throughput	pp512	Q8_0	15.67	tok/s	clean unattended; sd 0.20	raw_log_and_ledger	experiments/throughput/20260911-072256/official-Q8_0.log; RESULTS.md section 3.1
+throughput	tg128	Q8_0	6.04	tok/s	clean unattended; sd 0.02	raw_log_and_ledger	experiments/throughput/20260911-072256/official-Q8_0.log; RESULTS.md section 3.1
+thread_scaling	pp512	Q4_1T	10.16	tok/s	7 reps	ledger_only_no_raw	RESULTS.md section 3.2
+thread_scaling	tg128	Q4_1T	4.98	tok/s	7 reps	ledger_only_no_raw	RESULTS.md section 3.2
+thread_scaling	pp512	Q4_2T	19.94	tok/s	7 reps	ledger_only_no_raw	RESULTS.md section 3.2
+thread_scaling	tg128	Q4_2T	8.89	tok/s	7 reps	ledger_only_no_raw	RESULTS.md section 3.2
+thread_scaling	pp512	Q4_3T	19.75	tok/s	7 reps	ledger_only_no_raw	RESULTS.md section 3.2
+thread_scaling	tg128	Q4_3T	9.05	tok/s	7 reps	ledger_only_no_raw	RESULTS.md section 3.2
+thread_scaling	pp512	Q4_4T	20.48	tok/s	7 reps; noisier	ledger_only_no_raw	RESULTS.md section 3.2
+thread_scaling	tg128	Q4_4T	9.47	tok/s	7 reps; noisier	ledger_only_no_raw	RESULTS.md section 3.2
+context	pp512	Q4_2T	19.92	tok/s		ledger_only_no_raw	RESULTS.md section 3.3
+context	pp2048	Q4_2T	17.84	tok/s		ledger_only_no_raw	RESULTS.md section 3.3
+context	pp4096	Q4_2T	15.57	tok/s		ledger_only_no_raw	RESULTS.md section 3.3
+context	tg128	Q4_2T	8.86	tok/s		ledger_only_no_raw	RESULTS.md section 3.3
+context	pp2048	Q6_2T	11.89	tok/s		raw_log_and_ledger	experiments/throughput/20260911-072256/bartowski-Q6_K-context.log; RESULTS.md section 3.4
+context	pp4096	Q6_2T	10.85	tok/s		raw_log_and_ledger	experiments/throughput/20260911-072256/bartowski-Q6_K-context.log; RESULTS.md section 3.4
+context	tg128	Q6_2T	7.19	tok/s		raw_log_and_ledger	experiments/throughput/20260911-072256/bartowski-Q6_K-context.log; RESULTS.md section 3.4
+active_use	pp_unspecified	Q6_K	8.62	tok/s	approximate; sd 0.94; prompt length not recorded	ledger_only_no_raw	RESULTS.md section 3.4
+active_use	tg_unspecified	Q6_K	5.63	tok/s	approximate; sd 0.74; generation length not recorded	ledger_only_no_raw	RESULTS.md section 3.4
+quality_3way	first	Q8_0	3	count	9 cases	ledger_plus_run_metadata	RESULTS.md sections 7.1-7.3; experiments/q4-q6-q8-blind/20260911-223737/mapping.tsv
+quality_3way	second	Q8_0	6	count	9 cases	ledger_plus_run_metadata	RESULTS.md sections 7.1-7.3; experiments/q4-q6-q8-blind/20260911-223737/mapping.tsv
+quality_3way	third	Q8_0	0	count	9 cases	ledger_plus_run_metadata	RESULTS.md sections 7.1-7.3; experiments/q4-q6-q8-blind/20260911-223737/mapping.tsv
+quality_3way	mean_rank	Q8_0	1.67	rank	lower is better	ledger_plus_run_metadata	RESULTS.md sections 7.1-7.3; experiments/q4-q6-q8-blind/20260911-223737/mapping.tsv
+quality_3way	first	Q4_K_M	4	count	9 cases	ledger_plus_run_metadata	RESULTS.md sections 7.1-7.3; experiments/q4-q6-q8-blind/20260911-223737/mapping.tsv
+quality_3way	second	Q4_K_M	1	count	9 cases	ledger_plus_run_metadata	RESULTS.md sections 7.1-7.3; experiments/q4-q6-q8-blind/20260911-223737/mapping.tsv
+quality_3way	third	Q4_K_M	4	count	9 cases	ledger_plus_run_metadata	RESULTS.md sections 7.1-7.3; experiments/q4-q6-q8-blind/20260911-223737/mapping.tsv
+quality_3way	mean_rank	Q4_K_M	2.00	rank	lower is better	ledger_plus_run_metadata	RESULTS.md sections 7.1-7.3; experiments/q4-q6-q8-blind/20260911-223737/mapping.tsv
+quality_3way	first	Q6_K	2	count	9 cases	ledger_plus_run_metadata	RESULTS.md sections 7.1-7.3; experiments/q4-q6-q8-blind/20260911-223737/mapping.tsv
+quality_3way	second	Q6_K	2	count	9 cases	ledger_plus_run_metadata	RESULTS.md sections 7.1-7.3; experiments/q4-q6-q8-blind/20260911-223737/mapping.tsv
+quality_3way	third	Q6_K	5	count	9 cases	ledger_plus_run_metadata	RESULTS.md sections 7.1-7.3; experiments/q4-q6-q8-blind/20260911-223737/mapping.tsv
+quality_3way	mean_rank	Q6_K	2.33	rank	lower is better	ledger_plus_run_metadata	RESULTS.md sections 7.1-7.3; experiments/q4-q6-q8-blind/20260911-223737/mapping.tsv
+reasoning_ablation	first	Q8_OFF	3	count	4 cases	ledger_plus_run_metadata	RESULTS.md sections 8.1-8.3; experiments/reasoning-ablation/20260912-044934/mapping.tsv
+reasoning_ablation	second	Q8_OFF	0	count	4 cases	ledger_plus_run_metadata	RESULTS.md sections 8.1-8.3; experiments/reasoning-ablation/20260912-044934/mapping.tsv
+reasoning_ablation	third	Q8_OFF	1	count	4 cases	ledger_plus_run_metadata	RESULTS.md sections 8.1-8.3; experiments/reasoning-ablation/20260912-044934/mapping.tsv
+reasoning_ablation	fourth	Q8_OFF	0	count	4 cases	ledger_plus_run_metadata	RESULTS.md sections 8.1-8.3; experiments/reasoning-ablation/20260912-044934/mapping.tsv
+reasoning_ablation	mean_rank	Q8_OFF	1.50	rank	lower is better	ledger_plus_run_metadata	RESULTS.md sections 8.1-8.3; experiments/reasoning-ablation/20260912-044934/mapping.tsv
+reasoning_ablation	first	Q4_OFF	0	count	4 cases	ledger_plus_run_metadata	RESULTS.md sections 8.1-8.3; experiments/reasoning-ablation/20260912-044934/mapping.tsv
+reasoning_ablation	second	Q4_OFF	2	count	4 cases	ledger_plus_run_metadata	RESULTS.md sections 8.1-8.3; experiments/reasoning-ablation/20260912-044934/mapping.tsv
+reasoning_ablation	third	Q4_OFF	2	count	4 cases	ledger_plus_run_metadata	RESULTS.md sections 8.1-8.3; experiments/reasoning-ablation/20260912-044934/mapping.tsv
+reasoning_ablation	fourth	Q4_OFF	0	count	4 cases	ledger_plus_run_metadata	RESULTS.md sections 8.1-8.3; experiments/reasoning-ablation/20260912-044934/mapping.tsv
+reasoning_ablation	mean_rank	Q4_OFF	2.50	rank	lower is better	ledger_plus_run_metadata	RESULTS.md sections 8.1-8.3; experiments/reasoning-ablation/20260912-044934/mapping.tsv
+reasoning_ablation	first	Q8_ON	1	count	4 cases	ledger_plus_run_metadata	RESULTS.md sections 8.1-8.3; experiments/reasoning-ablation/20260912-044934/mapping.tsv
+reasoning_ablation	second	Q8_ON	1	count	4 cases	ledger_plus_run_metadata	RESULTS.md sections 8.1-8.3; experiments/reasoning-ablation/20260912-044934/mapping.tsv
+reasoning_ablation	third	Q8_ON	1	count	4 cases	ledger_plus_run_metadata	RESULTS.md sections 8.1-8.3; experiments/reasoning-ablation/20260912-044934/mapping.tsv
+reasoning_ablation	fourth	Q8_ON	1	count	4 cases	ledger_plus_run_metadata	RESULTS.md sections 8.1-8.3; experiments/reasoning-ablation/20260912-044934/mapping.tsv
+reasoning_ablation	mean_rank	Q8_ON	2.50	rank	lower is better	ledger_plus_run_metadata	RESULTS.md sections 8.1-8.3; experiments/reasoning-ablation/20260912-044934/mapping.tsv
+reasoning_ablation	first	Q4_ON	0	count	4 cases	ledger_plus_run_metadata	RESULTS.md sections 8.1-8.3; experiments/reasoning-ablation/20260912-044934/mapping.tsv
+reasoning_ablation	second	Q4_ON	1	count	4 cases	ledger_plus_run_metadata	RESULTS.md sections 8.1-8.3; experiments/reasoning-ablation/20260912-044934/mapping.tsv
+reasoning_ablation	third	Q4_ON	0	count	4 cases	ledger_plus_run_metadata	RESULTS.md sections 8.1-8.3; experiments/reasoning-ablation/20260912-044934/mapping.tsv
+reasoning_ablation	fourth	Q4_ON	3	count	4 cases	ledger_plus_run_metadata	RESULTS.md sections 8.1-8.3; experiments/reasoning-ablation/20260912-044934/mapping.tsv
+reasoning_ablation	mean_rank	Q4_ON	3.50	rank	lower is better	ledger_plus_run_metadata	RESULTS.md sections 8.1-8.3; experiments/reasoning-ablation/20260912-044934/mapping.tsv
+reasoning_ablation	head_to_head	Q8_OFF_vs_Q8_ON	3-1	wins	OFF preferred in 3 of 4 paired cases; exploratory	ledger_plus_run_metadata	RESULTS.md sections 8.1-8.3; experiments/reasoning-ablation/20260912-044934/mapping.tsv
+reasoning_ablation	head_to_head	Q4_OFF_vs_Q4_ON	3-1	wins	OFF preferred in 3 of 4 paired cases; exploratory	ledger_plus_run_metadata	RESULTS.md sections 8.1-8.3; experiments/reasoning-ablation/20260912-044934/mapping.tsv
+decision	quality_profile	Q8_0_reasoning_OFF	1	boolean	local quality-oriented preference under limited protocol	ledger	RESULTS.md section 14
+decision	fast_profile	Q4_K_M_reasoning_OFF	1	boolean	local speed-oriented preference under limited protocol	ledger	RESULTS.md section 14
+decision	default_Q6	Q6_K	0	boolean	not selected as local default for this hardware/protocol	ledger	RESULTS.md section 14
+decision	default_Q4_reasoning_ON	Q4_K_M_reasoning_ON	0	boolean	not selected; exploratory four-case ablation only	ledger	RESULTS.md section 14

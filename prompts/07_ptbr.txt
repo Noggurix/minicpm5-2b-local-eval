@@ -1,0 +1,11 @@
+Responda em português brasileiro natural, como se estivesse explicando para um desenvolvedor experiente.
+
+Explique por que simplesmente transformar uma função CPU-bound em async não faz com que ela execute em paralelo no CPython.
+
+Requisitos:
+- entre 120 e 160 palavras;
+- nenhum bullet point;
+- mencione explicitamente GIL;
+- diferencie concorrência de paralelismo;
+- explique quando multiprocessing é apropriado;
+- não use analogias.

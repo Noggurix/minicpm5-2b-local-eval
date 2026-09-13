@@ -1,0 +1,11 @@
+
+```json
+{
+  "minimum_completion_time": 12,
+  "schedule": {
+    "worker_1": ["A (t=0-4)", "C (t=4-9)"],
+    "worker_2": ["B (t=0-3)", "E (t=3-7)", "D (t=7-9)", "F (t=9-12)"]
+  },
+  "argument": "Critical path A(4)→C(5)→F(3) = 12 minutes. F cannot start before C completes, and C cannot start before A completes. The earliest possible completion time for F is thus 12. The schedule above achieves this bound."
+}
+```

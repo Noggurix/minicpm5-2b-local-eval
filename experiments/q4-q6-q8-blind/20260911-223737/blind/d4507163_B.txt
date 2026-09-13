@@ -1,0 +1,245 @@
+[Start thinking]
+
+Thinking Process:
+
+1.  **Analyze the Request:**
+    *   **Language:** Portuguese (Brazilian, natural, like explaining to an experienced developer).
+    *   **Topic:** Why turning a CPU-bound function into async doesn't make it execute in parallel in CPython.
+    *   **Constraints:**
+        *   Word count: Between 120 and 160 words.
+        *   No bullet points.
+        *   Must mention `GIL` (Global Interpreter Lock).
+        *   Must differentiate concurrency from parallelism.
+        *   Must explain when multiprocessing is appropriate.
+        *   No analogies.
+
+2.  **Drafting - Step 1 (Mental Outline):**
+    *   Need to explain that CPython uses the GIL.
+    *   Need to clarify that async is about I/O, not CPU.
+    *   Need to distinguish concurrency from parallelism.
+    *   Need to mention multiprocessing.
+    *   Need to keep word count strict.
+
+3.  **Drafting - Step 2 (Writing in Portuguese):**
+    O principal obstáculo é o `GIL`. O CPython confere acesso à pilha de execução exclusiva. Quando uma função CPU-bound espera para I/O, a Threads podem bloquear-se. Isso mantém o paralelismo indiretamente. A concorrência permite múltiplas atas simultaneamente, mas não execuções em núcleos diferentes. Para ganhar real paralelismo, deve-se usar multiprocessing. Isso cria processos independentes. Usar apenas async sem desse conceito falha. Entender a limitação do `GIL` é crucial. Evitar multilading sem razão desperdiça recursos. Em cenários de cálculo intensivo, o escalonador do CPU age ativamente. A `multiprocessing` destrói essa dependente. Concluir com a importância do contexto de workload.
+
+4.  **Reviewing Constraints:**
+    *   *Word count:* Let's count.
+    *   *GIL:* Mentioned.
+    *   *Concurrency vs Parallelism:* Mentioned.
+    *   *Multiprocessing:* Mentioned.
+    *   *No bullets:* Checked.
+    *   *No analogies:* Checked.
+    *   *Language:* Portuguese.
+
+5.  **Refining and Counting (Step 3):**
+    O principal obstáculo é o `GIL`. O CPython confere acesso à pilha de execução exclusiva. Quando uma função CPU-bound espera para I/O, as Threads podem bloquear-se. Isso mantém o paralelismo indiretamente. A concorrência permite múltiplas atas simultaneamente, mas não execuções em núcleos diferentes. Para ganhar real paralelismo, deve-se usar
+[End thinking]
+
+*Wait, I need to count words carefully.*
+
+    Let's try again to ensure I stay within 120-160 words.
+
+    Draft 2:
+    O principal obstáculo é o `GIL`. O CPython confere acesso à pilha de execução exclusiva. Quando uma função CPU-bound espera para I/O, as Threads podem bloquear-se. Isso mantém o paralelismo indiretamente. A concorrência permite múltiplas atas simultaneamente, mas não execuções em núcleos diferentes. Para ganhar real paralelismo, deve-se usar multiprocessing. Isso cria processos independentes. Usar apenas async sem desse conceito falha. Entender a limitação do `GIL` é crucial. Evitar multilading sem razão desperdiça recursos. Em cenários de cálculo intensivo, o escalonador do CPU age ativamente. A `multiprocessing` destrói essa dependência. Concluir com a importância do contexto de workload. Mantener essa distinção garante eficiência na produção. Ignorar o GIL em scripts grande escala resulta em slows. A escolha certa depende do workload. Não confunda a managing de threads com o escalonamento multicores.
+
+    *Counting:*
+    1. O
+    2. principal
+    3. obstáculo
+    4. é
+    5. o
+    6. `GIL`
+    7. O
+    8. CPython
+    9. confere
+    10. acesso
+    11. à
+    12. pilha
+    13. de
+    14. execução
+    15. exclusiva.
+    16. Quando
+    17. uma
+    18. função
+    19. CPU-bound
+    20. espera
+    21. para
+    22. I/O,
+    23. as
+    24. Threads
+    25. podem
+    26. bloquear-se.
+    27. Isso
+    28. mantém
+    29. o
+    30. paralelismo
+    31. indiretamente.
+    32. A
+    33. concorrência
+    34. permite
+    35. múltiplas
+    36. atas
+    37. simultaneamente,
+    38. mas
+    39. não
+    40. execuções
+    41. em
+    42. núcleos
+    43. diferentes.
+    44. Para
+    45. ganhar
+    46. real
+    47. paralelismo,
+    48. deve-se
+    49. usar
+    50. multiprocessing.
+    51. Isso
+    52. cria
+    53. processos
+    54. independentes.
+    55. Usar
+    56. apenas
+    57. async
+    58. sem
+    59. desse
+    60. conceito
+    61. falha.
+    62. Entender
+    63. a
+    64. limitação
+    65. do
+    66. `GIL`
+    67. é
+    68. crucial.
+    69. Evitar
+    70. multilading
+    71. sem
+    72. razão
+    73. desperdiça
+    74. recursos.
+    75. Em
+    76. cenários
+    77. de
+    78. cálculo
+    79. intensivo,
+    80. o
+    81. escalonador
+    82. do
+    83. CPU
+    84. age
+    85. ativamente.
+    86. A
+    87. `multiprocessing`
+    88. destrói
+    89. essa
+    90. dependência.
+    91. Concluir
+    92. com
+    93. a
+    94. importância
+    95. do
+    96. workload.
+    97. Mantener
+    98. essa
+    99. distinção
+    100. garante
+    101. eficiência
+    102. na
+    103. produção.
+    104. Ignorar
+    105. o
+    106. GIL
+    107. em
+    108. scripts
+    109. grande
+    110. escala
+    111. resulta
+    112. em
+    113. slows.
+    114. A
+    115. escolha
+    116. certa
+    117. depende
+    118. do
+    119. workload.
+    120. Não
+    121. confunda
+    122. a
+    123. managing
+    124. de
+    125. threads
+    126. com
+    127. o
+    128. escalonamento
+    129. multicores.
+
+    Total: 129 words.
+    Range: 120-160.
+    Conditions:
+    - GIL mentioned? Yes.
+    - Concurrency vs Parallelism? Yes.
+    - Multiprocessing? Yes.
+    - No bullets? Yes.
+    - No analogies? Yes.
+    - Language? Portuguese.
+
+    Wait, I need to make sure I don't accidentally go over or under. 129 is safe. But I need to make sure the flow is natural.
+    Let's double check the word count logic. Usually, punctuation attached to words counts as part of the word or separate depending on the counter. I will aim for slightly more to be safe within the 120-160 range.
+
+    Let's expand slightly to ensure I hit the minimum safely.
+
+    Draft 3 (Expansion):
+    O principal obstáculo é o `GIL`. O CPython confere acesso à pilha de execução exclusiva. Quando uma função CPU-bound espera para I/O, as Threads podem bloquear-se. Isso mantém o paralelismo indiretamente. A concorrência permite múltiplas atas simultaneamente, mas não execuções em núcleos diferentes. Para ganhar real paralelismo, deve-se usar multiprocessing. Isso cria processos independentes. Usar apenas async sem desse conceito falha. Entender a limitação do `GIL` é crucial. Evitar multilading sem razão desperdiça recursos. Em cenários de cálculo intensivo, o escalonador do CPU age ativamente. A `multiprocessing` destrói essa dependência. Concluir com a importância do workload. Mantener essa distinção garante eficiência na produção. Ignorar o GIL em scripts grande escala resulta em slows. A escolha certa depende do workload. Não confunda a managing de threads com o escalonamento multicores. Atenção total à perfis de desempenho evita pylôles no time. Respeitar esses princípios consolida a qualidade do sistema.
+
+    Count check:
+    1-129 from before.
+    Added: Atenção (130), total (131), à (132), perfis (133), de (134), desempenho (135), evita (136), pylôles (137), no (138), time (139), A (140), Respeitar (141), esses (142), princípios (143), consolida (144), a (145), qualidade (146), do (147), sistema (148).
+
+    Total approx 148 words. This is safely within 120-160.
+
+    Wait, I need to check if "CPU-bound" counts as one word. Yes. "I/O," counts as one. "blockader-se." counts as one.
+    Let's re-verify the count to be precise.
+
+    1 O
+    2 principal
+    3 obstáculo
+    4 é
+    5 o
+    6 `GIL`
+    7 O
+    8 CPython
+    9 confere
+    10 acesso
+    11 à
+    12 pilha
+    13 de
+    14 execução
+    15 exclusiva.
+    16 Quando
+    17 uma
+    18 função
+    19 CPU-bound
+    20 espera
+    21 para
+    22 I/O,
+    23 as
+    24 Threads
+    25 podem
+    26 bloquear-se.
+    27 Isso
+    28 mantém
+    29 o
+    30 paralelismo
+    31 indiretamente.
+    32 A
+    33 concorrência
+    34 permite
+    35 múltiplas
+    36 atas
+    37 simultaneamente,
+    38 mas
+    
+
+
+Exiting...

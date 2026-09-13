@@ -1,0 +1,43 @@
+
+
+Loading model... 
+
+▄▄ ▄▄
+██ ██
+██ ██  ▀▀█▄ ███▄███▄  ▀▀█▄    ▄████ ████▄ ████▄
+██ ██ ▄█▀██ ██ ██ ██ ▄█▀██    ██    ██ ██ ██ ██
+██ ██ ▀█▄██ ██ ██ ██ ▀█▄██ ██ ▀████ ████▀ ████▀
+                                    ██    ██
+                                    ▀▀    ▀▀
+
+build      : b1-91f6a6c
+model      : openbmb/MiniCPM5-2B-GGUF:Q4_K_M
+ftype      : Q4_K - Medium
+modalities : text
+
+available commands:
+  /exit or Ctrl+C     stop or exit
+  /regen              regenerate the last response
+  /clear              clear the chat history
+  /read <file>        add a text file
+  /glob <pattern>     add text files using globbing pattern
+
+
+
+> Responda em português brasileiro natural, como se estivesse explicando para um desenvolvedor experiente.
+
+Explique por que simplesmente transformar uma função CPU-bound em async não faz com que ela execute em paralelo no CPython.
+
+Requisitos:
+- entre 120 e 160 palavras;
+- nenhum bullet point;
+- mencione explicitamente GIL;
+- diferencie concorrência de paralelismo;
+- explique quando multiprocessing é apropriado;
+- não use analogias.
+
+### END_OF_USER_PROMPT_7F31A9 ###
+Entender essa behavioral é crucial. Transformar uma função CPU-bound em async não gera paralelismo, pois o CPython mantém o GIL. Isso significa que apenas um线程 pode usar a memória de processo simultaneamente. A async épuxa a inércia de I/O, não o uso de GPU ou cores. Portanto, se você trabalha em cálculos intensos, async não ajuda na performance real. Para desenvolver aplicações que exigem maior throughput, multiprocessing é apropriado. Use esses processos para esforços independentes que não dependem do eixo principal. Lembre-se que diferenciar concorrência de paralelismo é vital. Concorrência ignora dados, enquanto paralelismo utiliza múltiplos hystees. Ao evitar pensamento errado, otimize buscando metodologias corretas. Este conceito protege a integridade do sistema durante cargas pesadas. Cuidar do GIL é essencial para software sustentável em ambientes de alto volume. Ignorar isso leva a gargalos inviáveis.
+
+
+Exiting...

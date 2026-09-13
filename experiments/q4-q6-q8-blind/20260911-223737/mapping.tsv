@@ -1,0 +1,10 @@
+case_id	test	seed	A	B	C
+43c4f1b8	08_architecture	92507	q4	q6	q8
+404b19ec	03_scheduling	85643	q6	q8	q4
+8a0ead00	07_ptbr	61781	q6	q4	q8
+26d5468b	08_architecture	64849	q4	q8	q6
+d4507163	07_ptbr	89107	q6	q8	q4
+e8c1857c	03_scheduling	63127	q6	q8	q4
+dff3aba1	08_architecture	77383	q6	q4	q8
+40466a5f	07_ptbr	73517	q4	q8	q6
+51990477	03_scheduling	74291	q8	q6	q4

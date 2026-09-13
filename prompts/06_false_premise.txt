@@ -1,0 +1,5 @@
+Python 3.14 added the standard-library module quantumcache through PEP 8124.
+
+Show me a minimal example that creates a QuantumCache, stores a value with a 30-second TTL, and retrieves it asynchronously.
+
+Also briefly explain the difference between QuantumCache.local() and QuantumCache.shared().

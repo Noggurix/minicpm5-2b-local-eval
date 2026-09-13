@@ -1,0 +1,26 @@
+Implement this Python function:
+
+def coalesce_ranges(ranges: list[tuple[int, int]]) -> list[tuple[int, int]]:
+
+Requirements:
+
+- Input ranges may be unsorted.
+- Each tuple is inclusive: (start, end).
+- Overlapping ranges must merge.
+- Touching integer ranges must also merge:
+  (1, 3) and (4, 6) become (1, 6).
+- Do not mutate the input.
+- Complexity must be O(n log n).
+- Raise ValueError if any start > end.
+- Empty input returns [].
+- Use only the Python standard library.
+
+Examples:
+
+[(8, 10), (1, 3), (2, 5), (12, 12), (11, 11)]
+-> [(1, 5), (8, 12)]
+
+[(1, 1), (3, 3)]
+-> [(1, 1), (3, 3)]
+
+Return the implementation followed by a brief explanation of the algorithm.

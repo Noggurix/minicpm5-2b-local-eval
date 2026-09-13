@@ -1,0 +1,20 @@
+Dados:
+
+Ada: backend, Go, senior
+Bia: frontend, TypeScript, junior
+Caio: backend, Rust, mid
+Duda: data, Python, senior
+
+Retorne EXATAMENTE um único objeto JSON minificado, sem Markdown e sem explicação.
+
+As únicas chaves permitidas são:
+senior_names
+backend_count
+languages
+
+Regras:
+- senior_names: nomes dos seniors em ordem alfabética.
+- backend_count: número inteiro de pessoas backend.
+- languages: linguagens únicas em ordem alfabética.
+
+Não inclua nenhuma outra chave.

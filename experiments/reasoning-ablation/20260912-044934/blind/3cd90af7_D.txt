@@ -1,0 +1,3 @@
+Transformar uma função CPU-bound em async gera confusione sobre desempenho. O cPython mantém o GIL, o que impede múltiplas tácticas processos corretamente. Assim, async apenas afasta a execução serdinha em thread, sem criar threads núcleos. Para otimizar, deve-se considerar parcialidade. A concorrência permite interrupções rápidas, mas não speeds aumentam. O paralelismo exige processos sérios, como o multiprocessing. Utilize esse método quando o recursos de CPU são limitados e o trabalho é intenso. Ignorar o GIL pode levar ao custo total de memória elevado. Entender essa distinção evita erros na arquitetura. Apply essa lição ao projeto. Cuidado ao desvadir arquitetura. Mantenha atenção aos recursos. Garanta eficiência.
+
+

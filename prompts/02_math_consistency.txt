@@ -1,0 +1,8 @@
+Find the smallest positive integer n satisfying all conditions:
+
+n is divisible by 7
+n leaves remainder 1 when divided by 5
+n leaves remainder 2 when divided by 6
+n leaves remainder 3 when divided by 8
+
+If there is no such integer, write "NO SOLUTION" and then give a proof in at most two sentences.

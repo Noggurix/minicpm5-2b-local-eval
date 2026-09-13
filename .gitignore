@@ -1,0 +1,31 @@
+# Large or regenerable local artifacts.
+*.gguf
+*.ggml
+*.safetensors
+*.bin
+models/
+**/build*/
+**/.cache/
+**/__pycache__/
+*.pyc
+
+# Local workspace inventories.
+inventory.txt
+
+# Local secrets and credentials.
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Editor, backup, crash, and agent-local artifacts.
+*.swp
+*.swo
+*~
+*.bak
+core
+core.*
+.codex/
+.agents/

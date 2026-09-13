@@ -1,0 +1,14 @@
+**Database Modeling**
+Model jobs as a table (`jobs`) with a `status` column: `pending`, `processing`, `success`, or `failed`. The idempotency key (provided by the provider) is stored in a separate `provider_keys` table, ensuring no key is reused without action.
+
+**Concurrency Control**
+Use a single `UPDATE` statement with a `WHERE status = 'pending'` condition. This is a "saga" pattern: a worker acquires a row, processes it, and commits/rolls back the transaction. If the worker crashes mid-commit, PostgreSQL enforces atomicity.
+
+**Idempotency Key Source**
+The key originates from the external payment provider. Workers do not generate keys; they must retrieve an existing key for a given request ID from `provider_keys` before sending the charge.
+
+**Crash Scenario**
+If a worker crashes after the provider accepts charge but before PostgreSQL records success, the job remains `pending`. A new worker will retry. Since the provider rejects duplicate submissions with the same key, the charge never occurs twice.
+
+**Exactly-Once Guarantee**
+The system can claim exactly-once execution. Because each job is a database row, the `UPDATE ... WHERE` is atomic. If a worker crashes during the `UPDATE` that transitions a job to `success`, the transaction rolls back, leaving the job `pending` for retry. Retrying does not double-charge because the provider's idempotency key prevents processing duplicates.

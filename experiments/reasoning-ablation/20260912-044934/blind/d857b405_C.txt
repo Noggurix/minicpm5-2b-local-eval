@@ -1,0 +1,46 @@
+# QuantumCache with Asynchronous Retrieval
+
+```python
+import asyncio
+from quantumcache import QuantumCache
+
+async def main():
+    # Create a QuantumCache instance
+    cache = QuantumCache()
+    
+    # Store a value with a 30-second TTL
+    await cache.set("my_value", "important_data", ttl=30)
+    
+    # Asynchronously retrieve the value
+    value = await cache.get("my_value")
+    print(f"Retrieved: {value}")
+    
+    # Wait for TTL to expire
+    await asyncio.sleep(35)
+    
+    # Try to retrieve (should fail because TTL expired)
+    try:
+        value = await cache.get("my_value")
+        print(f"Retrieved after TTL: {value}")
+    except Exception as e:
+        print(f"Error as expected: {type(e).__name__}: {e}")
+
+if __name__ == "__main__":
+    asyncio.run(main())
+```
+
+## Key Differences: `QuantumCache.local()` vs `QuantumCache.shared()`
+
+| Aspect | `local()` | `shared()` |
+|--------|----------|-----------|
+| **Context** | Operates within a single process only | Works across multiple processes |
+| **Default value** | No default cache value | Initializes an empty shared cache |
+| **Access** | Only accessible to the process that created it | Available to any other running process |
+| **Use case** | Fine-grained, in-process caching | Distributed caching for multi-process applications |
+
+**Important Note:** You need to install the quantumcache package first:
+```bash
+pip install quantumcache
+```
+
+

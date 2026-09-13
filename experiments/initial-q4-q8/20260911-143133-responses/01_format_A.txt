@@ -1,0 +1,70 @@
+
+
+Loading model... 
+
+▄▄ ▄▄
+██ ██
+██ ██  ▀▀█▄ ███▄███▄  ▀▀█▄    ▄████ ████▄ ████▄
+██ ██ ▄█▀██ ██ ██ ██ ▄█▀██    ██    ██ ██ ██ ██
+██ ██ ▀█▄██ ██ ██ ██ ▀█▄██ ██ ▀████ ████▀ ████▀
+                                    ██    ██
+                                    ▀▀    ▀▀
+
+build      : b1-91f6a6c
+model      : openbmb/MiniCPM5-2B-GGUF:Q4_K_M
+ftype      : Q4_K - Medium
+modalities : text
+
+available commands:
+  /exit or Ctrl+C     stop or exit
+  /regen              regenerate the last response
+  /clear              clear the chat history
+  /read <file>        add a text file
+  /glob <pattern>     add text files using globbing pattern
+
+
+
+> Dados:
+
+Ada: backend, Go, senior
+Bia: frontend, TypeScript, junior
+Caio: backend, Rust, mid
+Duda: data, Python, senior
+
+Retorne EXATAMENTE um único objeto JSON minificado, sem Markdown e sem explicação.
+
+As únicas chaves permitidas são:
+senior_names
+backend_count
+languages
+
+Regras:
+- senior_names: nomes dos seniors em ordem alfabética.
+- backend_count: número inteiro de pessoas backend.
+- languages: linguagens únicas em ordem alfabética.
+
+Não inclua nenhuma outra chave.
+
+[Start thinking]
+
+We need to output a JSON object with specific keys. Let's parse the given data.
+
+Ada: backend, Go, senior -> senior_names should include "Ada"? Actually senior_names: names of seniors in alphabetical order. Who are seniors? Ada: senior, Duda: senior. So senior_names = ["Ada", "Duda"]? But need alphabetical order: Ada, Duda. Yes.
+
+backend_count: number of people with backend. Who has backend? Ada: backend, Caio: backend. So backend_count = 2.
+
+languages: unique languages in alphabetical order. All languages: Go, TypeScript, Rust, Python. Unique languages: Go, Rust, TypeScript, Python. Alphabetical order: Go, Rust, TypeScript, Python. So languages = ["Go", "Rust", "TypeScript", "Python"].
+
+We need to output only JSON, no markdown, no explanation.
+
+Make sure it's minified JSON.
+
+So: {"senior_names": ["Ada", "Duda"], "backend_count": 2, "languages": ["Go", "Rust", "TypeScript", "Python"]}
+
+Check: No extra keys. Correct.
+[End thinking]
+
+{"senior_names": ["Ada", "Duda"], "backend_count": 2, "languages": ["Go", "Rust", "TypeScript", "Python"]}
+
+
+Exiting...

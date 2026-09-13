@@ -1,0 +1,43 @@
+
+
+Loading model... 
+
+▄▄ ▄▄
+██ ██
+██ ██  ▀▀█▄ ███▄███▄  ▀▀█▄    ▄████ ████▄ ████▄
+██ ██ ▄█▀██ ██ ██ ██ ▄█▀██    ██    ██ ██ ██ ██
+██ ██ ▀█▄██ ██ ██ ██ ▀█▄██ ██ ▀████ ████▀ ████▀
+                                    ██    ██
+                                    ▀▀    ▀▀
+
+build      : b1-91f6a6c
+model      : openbmb/MiniCPM5-2B-GGUF:Q8_0
+ftype      : Q8_0
+modalities : text
+
+available commands:
+  /exit or Ctrl+C     stop or exit
+  /regen              regenerate the last response
+  /clear              clear the chat history
+  /read <file>        add a text file
+  /glob <pattern>     add text files using globbing pattern
+
+
+
+> Responda em português brasileiro natural, como se estivesse explicando para um desenvolvedor experiente.
+
+Explique por que simplesmente transformar uma função CPU-bound em async não faz com que ela execute em paralelo no CPython.
+
+Requisitos:
+- entre 120 e 160 palavras;
+- nenhum bullet point;
+- mencione explicitamente GIL;
+- diferencie concorrência de paralelismo;
+- explique quando multiprocessing é apropriado;
+- não use analogias.
+
+### END_OF_USER_PROMPT_7F31A9 ###
+Transformar uma função CPU-bound em async gera confusione sobre desempenho. O cPython mantém o GIL, o que impede múltiplas tácticas processos corretamente. Assim, async apenas afasta a execução serdinha em thread, sem criar threads núcleos. Para otimizar, deve-se considerar parcialidade. A concorrência permite interrupções rápidas, mas não speeds aumentam. O paralelismo exige processos sérios, como o multiprocessing. Utilize esse método quando o recursos de CPU são limitados e o trabalho é intenso. Ignorar o GIL pode levar ao custo total de memória elevado. Entender essa distinção evita erros na arquitetura. Apply essa lição ao projeto. Cuidado ao desvadir arquitetura. Mantenha atenção aos recursos. Garanta eficiência.
+
+
+Exiting...

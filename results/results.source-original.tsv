@@ -1,0 +1,68 @@
+groupitemvariantvalueunitnotes
+throughputpp512Q4_K_M_official19.79tok/sclean unattended; sd 0.41
+throughputtg128Q4_K_M_official9.08tok/sclean unattended; sd 0.02
+throughputpp512Q4_K_M_bartowski18.85tok/sclean unattended; sd 0.04
+throughputtg128Q4_K_M_bartowski8.67tok/sclean unattended; sd 0.06
+throughputpp512IQ4_XS21.83tok/sclean unattended; sd 0.04
+throughputtg128IQ4_XS6.98tok/sclean unattended; sd 0.02
+throughputpp512Q5_K_M10.06tok/sclean unattended; sd 0.01
+throughputtg128Q5_K_M6.49tok/sclean unattended; sd 0.07
+throughputpp512Q6_K12.81tok/sclean unattended; sd 0.03
+throughputtg128Q6_K7.20tok/sclean unattended; sd 0.01
+throughputpp512Q3_K_M11.49tok/sclean unattended; sd 0.04
+throughputtg128Q3_K_M8.26tok/sclean unattended; sd 0.01
+throughputpp512Q8_015.67tok/sclean unattended; sd 0.20
+throughputtg128Q8_06.04tok/sclean unattended; sd 0.02
+thread_scalingpp512Q4_1T10.16tok/s7 reps
+thread_scalingtg128Q4_1T4.98tok/s7 reps
+thread_scalingpp512Q4_2T19.94tok/s7 reps
+thread_scalingtg128Q4_2T8.89tok/s7 reps
+thread_scalingpp512Q4_3T19.75tok/s7 reps
+thread_scalingtg128Q4_3T9.05tok/s7 reps
+thread_scalingpp512Q4_4T20.48tok/s7 reps; noisier
+thread_scalingtg128Q4_4T9.47tok/s7 reps; noisier
+contextpp512Q4_2T19.92tok/s
+contextpp2048Q4_2T17.84tok/s
+contextpp4096Q4_2T15.57tok/s
+contexttg128Q4_2T8.86tok/s
+contextpp2048Q6_2T11.89tok/s
+contextpp4096Q6_2T10.85tok/s
+contexttg128Q6_2T7.19tok/s
+quality_3wayfirstQ8_03count9 cases
+quality_3waysecondQ8_06count9 cases
+quality_3waythirdQ8_00count9 cases
+quality_3waymean_rankQ8_01.67ranklower is better
+quality_3wayfirstQ4_K_M4count9 cases
+quality_3waysecondQ4_K_M1count9 cases
+quality_3waythirdQ4_K_M4count9 cases
+quality_3waymean_rankQ4_K_M2.00ranklower is better
+quality_3wayfirstQ6_K2count9 cases
+quality_3waysecondQ6_K2count9 cases
+quality_3waythirdQ6_K5count9 cases
+quality_3waymean_rankQ6_K2.33ranklower is better
+reasoning_ablationfirstQ8_OFF3count4 cases
+reasoning_ablationsecondQ8_OFF0count4 cases
+reasoning_ablationthirdQ8_OFF1count4 cases
+reasoning_ablationfourthQ8_OFF0count4 cases
+reasoning_ablationmean_rankQ8_OFF1.50ranklower is better
+reasoning_ablationfirstQ4_OFF0count4 cases
+reasoning_ablationsecondQ4_OFF2count4 cases
+reasoning_ablationthirdQ4_OFF2count4 cases
+reasoning_ablationfourthQ4_OFF0count4 cases
+reasoning_ablationmean_rankQ4_OFF2.50ranklower is better
+reasoning_ablationfirstQ8_ON1count4 cases
+reasoning_ablationsecondQ8_ON1count4 cases
+reasoning_ablationthirdQ8_ON1count4 cases
+reasoning_ablationfourthQ8_ON1count4 cases
+reasoning_ablationmean_rankQ8_ON2.50ranklower is better
+reasoning_ablationfirstQ4_ON0count4 cases
+reasoning_ablationsecondQ4_ON1count4 cases
+reasoning_ablationthirdQ4_ON0count4 cases
+reasoning_ablationfourthQ4_ON3count4 cases
+reasoning_ablationmean_rankQ4_ON3.50ranklower is better
+reasoning_ablationhead_to_headQ8_OFF_vs_Q8_ON3-1winsOFF wins
+reasoning_ablationhead_to_headQ4_OFF_vs_Q4_ON3-1winsOFF wins
+decisionquality_profileQ8_0_reasoning_OFF1booleanrecommended
+decisionfast_profileQ4_K_M_reasoning_OFF1booleanrecommended
+decisiondefault_Q6Q6_K0booleannot recommended
+decisiondefault_Q4_reasoning_ONQ4_K_M_reasoning_ON0booleannot recommended

@@ -1,0 +1,9 @@
+[Start thinking]
+
+We need to respond in Portuguese, natural, for an experienced developer. Explain why simply turning a CPU-bound function into async doesn't make it run in parallel in CPython. Constraints: 120-160 words, no bullet points, mention GIL explicitly, differentiate concurrency vs parallelism, explain when multiprocessing is appropriate, no analogies. Need to be careful with word count.
+[End thinking]
+
+A transformação de async para uma função CPU-bound não altera a execução em paralelo. Isso ocorre porque o Global Interpreter Lock (GIL) bloqueia a执用ção de线程 simultâneas na consumação padrão do CPython. Quando uma função é escrita assim, o código espera na execução enquanto dados são transitados, não semânticamente paralelizando a operação. A diferença vital entre concorrência e paralelismo está na absorção de carregamento de recursos. Concorrência permite múltiplos manipuladores aguardando o retorno, mas não aumenta a taxa de processamento. Multiprocessing é apropriado quando o trabalho envolve grande memória e não leva tempo de execução significativo em uma única thread. Ao usar processos independentes, a liberação do GIL permite que cada processo siga dentro do seu space de thread. Mesmo que o conteúdo seja parseção, a responsabilidade do executor permanece na linha de enfoque. Ignorar esse limite, mesmo com async, mantém o desempenho limitado pela singularidade do interpreter. Entender essa distinção evita hipótese de melhoria incerta na arquitetura.
+
+
+Exiting...

@@ -1,0 +1,20 @@
+Consider this JavaScript:
+
+async function loadUsers(ids) {
+    const users = [];
+
+    ids.forEach(async id => {
+        users.push(await fetchUser(id));
+    });
+
+    return users;
+}
+
+The intended behavior is:
+
+- start all fetchUser calls concurrently;
+- wait until every fetch finishes;
+- return the users in the same order as ids;
+- do not use external libraries.
+
+Explain the bug in at most three sentences and provide the corrected implementation.

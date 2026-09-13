@@ -1,0 +1,18 @@
+There are two identical workers. Each worker can execute only one task at a time.
+Tasks are non-preemptive.
+
+Durations and dependencies:
+
+A: 4 minutes, no dependencies
+B: 3 minutes, no dependencies
+C: 5 minutes, depends on A
+D: 2 minutes, depends on A and B
+E: 4 minutes, depends on B
+F: 3 minutes, depends on C and D
+
+Find the minimum possible makespan.
+
+Give:
+1. the minimum completion time;
+2. one valid optimal schedule;
+3. a short argument showing why no faster schedule is possible.

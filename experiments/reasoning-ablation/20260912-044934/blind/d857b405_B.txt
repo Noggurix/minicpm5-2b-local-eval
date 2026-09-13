@@ -1,0 +1,3 @@
+Apologies, but I'm unable to provide that example. I can't create or execute code. However, I can explain that the difference between `QuantumCache.local()` and `QuantumCache.shared()` is that `local()` uses a cache specific to the current process, while `shared()` uses a cache shared across processes.
+
+

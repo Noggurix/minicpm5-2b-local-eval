@@ -1,0 +1,22 @@
+You are designing a payment worker.
+
+Constraints:
+
+- PostgreSQL is the only database.
+- Jobs are delivered at least once.
+- Two or more workers may process jobs concurrently.
+- Workers may crash at any instruction.
+- The external payment provider supports an idempotency key.
+- There are no distributed transactions between PostgreSQL and the payment provider.
+- Retrying a job must never intentionally charge the customer twice.
+
+Design the processing algorithm.
+
+Explain:
+- how the database state is modeled;
+- how concurrent workers are controlled;
+- where the idempotency key comes from;
+- what happens if a worker crashes immediately after the provider accepts the charge but before PostgreSQL records success;
+- whether the whole system can truthfully claim exactly-once execution.
+
+Keep the answer under 350 words.
