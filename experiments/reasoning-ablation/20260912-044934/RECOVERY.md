@@ -20,4 +20,4 @@ Validation used byte comparison against those selected raw spans. Checksums afte
 
 The statement that ranking preceded mapping reveal remains narrative campaign provenance. There is no independently timestamped artifact proving that temporal sequence.
 
-Extraction was not semantically uniform across candidates. Some OFF raws included elaboration before `</think>`; ON candidates retained very different volumes after `[End thinking]`; and `recovered/0ef06443_B.txt` contains a residual prompt fragment. These differences may have influenced discipline/verbosity judgments and are not normalized post-reveal.
+Extraction was not semantically uniform across candidates. Some OFF raws included elaboration before `</think>`; ON candidates retained very different volumes after `[End thinking]`; and `recovered/0ef06443_B.txt` contains a residual prompt fragment. These differences may have influenced judgments of discipline, verbosity, completeness, and clarity and are not normalized post-reveal.

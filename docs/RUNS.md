@@ -1,7 +1,5 @@
 # MiniCPM5-2B Local Evaluation — Run Index
 
-This file indexes the major quality runs in the study.
-
 ## Initial quality suite
 
 Path:
@@ -111,7 +109,7 @@ Raw files are intact.
 
 For architecture case `f13a93e0`, A/B were recovered by the intermediate recovery process. C/D were presented to the evaluator before reveal as identity-stripped raw excerpts beginning at raw line 25, with model/quantization headers excluded, because the corresponding recovered files remained empty. After evaluation and mapping reveal, exact C/D final-answer spans were materialized post hoc into `recovered/` from those same raws. No inference was rerun and the ranking was not changed.
 
-Extraction was not uniform across candidates: some OFF outputs contained elaboration before `</think>`, post-`[End thinking]` retained content varied greatly, and one recovered file contains residual prompt text. This may have affected judgments of discipline/verbosity.
+Extraction was not uniform across candidates: some OFF outputs contained elaboration before `</think>`, post-`[End thinking]` retained content varied greatly, and one recovered file contains residual prompt text. This may have affected judgments of discipline, verbosity, completeness, and clarity.
 
 The campaign ledger records that rankings were frozen before mapping reveal, but there is no independently timestamped artifact proving that sequence.
 

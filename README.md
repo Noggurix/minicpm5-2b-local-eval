@@ -27,9 +27,10 @@ end-to-end request latency.
 
 ## Key findings
 
-- **Q4_K_M was the practical throughput winner.** The official OpenBMB
-  Q4_K_M reached approximately 19.79 tok/s for pp512 and 9.08 tok/s for
-  tg128 on the tested system.
+- **Official Q4_K_M had the highest generation throughput in the clean
+  unattended battery.** It reached approximately 19.79 tok/s for pp512 and
+  9.08 tok/s for tg128 on the tested system. IQ4_XS had the highest pp512
+  prompt-processing throughput in that battery.
 
 - **Q8_0 became the quality-oriented local preference.** In the nine-case
   Q4/Q6/Q8 comparison, Q8 had a mean rank of 1.67 and no last-place finishes.
@@ -115,8 +116,6 @@ list and a minimal rerun path.
 
 ## Methodological limitations
 
-Important limitations include:
-
 - one physical test machine;
 - one low-power Skylake-class CPU;
 - small qualitative sample sizes;
@@ -167,7 +166,8 @@ Machine-readable consolidated results can also be validated with:
 
 ## License
 
-Original repository material is licensed under Apache-2.0 where applicable.
+Original material authored for this repository is licensed under Apache-2.0 to
+the extent the repository authors are entitled to license it.
 
 See [`LICENSE`](LICENSE) and [`docs/LICENSING.md`](docs/LICENSING.md) for the
 license text and scope.

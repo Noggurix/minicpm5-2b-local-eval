@@ -2,12 +2,14 @@
 
 Campaign finalized: 2026-09-12
 
-This document records the observations and historical rankings from this local MiniCPM5-2B evaluation campaign.
-Raw runs, mappings, blind outputs, and diagnostic artifacts are preserved where
-available and should be read alongside the consolidated ledger, which also
-retains observations whose raw logs did not survive.
+This document records the observations and historical rankings from this local
+MiniCPM5-2B evaluation campaign. The ledger consolidates those rankings with
+the recorded numeric measurements. Raw runs, mappings, blind outputs, and
+diagnostic artifacts are preserved where available and should be read alongside
+the ledger, which also retains observations whose raw logs did not survive.
 
-This ledger consolidates the recorded numeric measurements and historical rankings. Interpretive annotations identify where the available evidence does not support a strong claim; they do not change measurements or ranking order.
+Interpretive annotations identify where the available evidence does not support
+a strong claim; they do not change measurements or ranking order.
 
 ---
 
@@ -69,7 +71,7 @@ Ollama was stopped for this battery.
 | Q3_K_M | Bartowski | 1.15 GiB | 11.49 ± 0.04 | 8.26 ± 0.01 |
 | Q8_0 | OpenBMB official | 2.49 GiB | 15.67 ± 0.20 | 6.04 ± 0.02 |
 
-Practical throughput winner: official OpenBMB Q4_K_M.
+Official OpenBMB Q4_K_M had the highest tg128 generation throughput in this clean unattended battery.
 
 Relative to official Q4_K_M:
 
@@ -79,7 +81,7 @@ Relative to official Q4_K_M:
 - Q8_0 prompt processing is about 20.8% slower.
 - Q8_0 is roughly 72% larger on disk than official Q4_K_M.
 
-IQ4_XS had excellent prompt-processing throughput but substantially slower generation.
+IQ4_XS had the highest pp512 throughput among the tested configurations in this clean unattended battery, but its tg128 generation throughput was materially lower than the official Q4_K_M result.
 
 Q5_K_M showed substantially lower throughput than the neighboring tested quantizations on this CPU.
 
@@ -630,7 +632,7 @@ input
 → deterministic validator checks output
 → reject/retry/fallback on failure
 
-This validator-backed pattern is the most defensible deployment pattern suggested by these limited observations.
+This validator-backed pattern is a cautious deployment option suggested by these limited observations.
 
 ---
 
@@ -687,13 +689,9 @@ The local Q4 OFF preference is intended for bounded tasks with automatic validat
 
 #### Q6_K
 
-Reason:
-
 Q6_K was not selected as the default on this hardware/protocol because its observed aggregate rank/performance trade-off did not justify its cost for the intended use.
 
 #### Q4_K_M + reasoning ON
-
-Reason:
 
 It had the highest mean rank number in the exploratory four-case ablation, with three relative last-place finishes. This is a limited local observation, not a general verdict on reasoning ON.
 
@@ -710,7 +708,7 @@ Across the tested tasks, a recurring concern was **reliability and discipline**:
 - it may confidently hallucinate plausible facts;
 - reasoning ON received lower relative ranks in several cases of the small ablation, but the protocol does not establish a general causal effect.
 
-Most defensible candidate use cases suggested by this campaign:
+Candidate use cases suggested by this campaign:
 
 - local extraction;
 - transformation;
@@ -735,8 +733,6 @@ Raw evidence is retained because several interpretations depend on stochastic qu
 
 These results should not be generalized beyond their scope without caution.
 
-Limitations:
-
 - single physical machine;
 - Intel Skylake-class low-power CPU;
 - llama.cpp b10883;
@@ -747,7 +743,7 @@ Limitations:
 - some early captured outputs were incomplete under a constrained output/reasoning budget, but complete stop reasons/token counts did not survive;
 - initial blind protocol leaked model identity through llama.cpp headers;
 - final reasoning-ablation blind extractor depended on the prompt/sentinel appearing integrally in captured output; the failure does not prove inference-prompt truncation, and the marker was not demonstrably neutral;
-- reasoning-ablation extraction was non-uniform across candidates and may have influenced discipline/verbosity judgments;
+- reasoning-ablation extraction was non-uniform across candidates and may have influenced judgments of discipline, verbosity, completeness, and clarity;
 - raw outputs remained intact; A/B for architecture case `f13a93e0` were recovered by the intermediate process, C/D were presented before reveal as identity-stripped raw excerpts starting at line 25, and C/D recovery files were materialized post hoc after evaluation and mapping reveal without rerunning inference or changing rankings;
 - separate raw logs did not survive for Q4 thread scaling, Q4 context scaling, or the earlier active-use Q6 observation;
 - the frozen-before-reveal sequence is recorded narratively but lacks an independently timestamped proof artifact.

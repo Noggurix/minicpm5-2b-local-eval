@@ -1,6 +1,6 @@
 # Reproducibility scope
 
-This is a reproducible evaluation record with partially reproducible execution. Preserved artifacts support audit and partial reruns, but they do not support a claim of byte-identical or fully controlled reproduction.
+This repository provides an auditable evaluation record with partially reproducible execution. Preserved artifacts support audit and partial reruns, but they do not support a claim of byte-identical or fully controlled reproduction.
 
 ## A. Auditable and reconstructible
 
@@ -37,7 +37,7 @@ Their consolidated numbers remain recorded observations in `RESULTS.md` and are 
 - The initial quality harness and commands for the ledger-only series are not available.
 - The cache/download procedure required before using `--offline` was not documented.
 - Individual throughput repetitions were not retained; only the aggregate rows in the logs are available.
-- Complete power, CPU-frequency, background-load, and thermal control was not recorded. CPU temperature was manually observed reaching roughly 55 °C under sustained 100% utilization, with no observed value above that. This was not continuously logged or synchronized with individual benchmark runs. The observations showed no evident sign of throttling, but they do not establish causality or constitute formal thermal control.
+- Complete power, CPU-frequency, background-load, and thermal control was not recorded. Under sustained 100% utilization, CPU temperature was manually observed reaching roughly 55 °C; no value above that was observed. This was not continuously logged or synchronized with individual benchmark runs. The observations showed no evident sign of throttling, but they do not establish causality or constitute formal thermal control.
 - `shuf` and UUID generation had no recorded RNG seed. Historical final orders and IDs survive, but reruns will generate different ones.
 - Complete generation stop reasons and token counts were not preserved for every quality output.
 
